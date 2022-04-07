@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 import { Wrapper, Container, Content, Introduction, Intro, Subtitle, ImageBox, Buttons, Button } from '../styles/home'
 
+import SEO from '../components/forward/SEO'
+
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>xyLuis</title>
-      </Head>
+    <>
+      <SEO />
 
       <Wrapper>
         <Container className="main-container">
@@ -30,6 +30,6 @@ export default function Home() {
           </Buttons>
         </Container>
       </Wrapper>
-    </div>
+    </>
   )
 }
