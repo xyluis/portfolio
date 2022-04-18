@@ -1,9 +1,9 @@
-/* import Header from '../header' */
+import Header from '../header'
 
 export default function Layout ({ children }: PropsWithChildren): JSX.Element {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
     </>
   )

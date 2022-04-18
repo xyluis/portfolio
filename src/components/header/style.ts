@@ -12,13 +12,21 @@ export const Wrapper = styled('div', {
 export const Container = styled('header', {
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+
+  '@mobile': {
+    justifyContent: 'center',
+  }
 })
 
 export const Links = styled('nav', {
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+
+  '@mobile': {
+    display: 'none'
+  }
 })
 
 export const Link = styled('a', {

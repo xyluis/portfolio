@@ -15,8 +15,8 @@ interface MakeUrlProps {
 const makeUrl = ({ path = '' }: MakeUrlProps) => `https://zorin.com.br/${path}`
 
 export default function SEO({
-  description = 'I\'m a computer science student at Universidade de Cuiabá (UNIC) in Cuiabá, MT, Brazil. Love pizza, games, movies and travel!',
-  title = '⚫ xyLuis',
+  description = 'I\'m a computer science student at Universidade de Cuiabá (UNIC) in Cuiabá, MT, Brazil.',
+  title = 'xyluis',
   children
 }: PropsWithChildren<Props>): JSX.Element {
   const metaImage = 'https://github.com/xyluis.png'

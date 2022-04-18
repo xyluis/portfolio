@@ -22,18 +22,6 @@ export default class MyDocument extends Document {
           <meta name="MobileOptimized" content="320" />
           <meta name="HandheldFriendly" content="True" />
           <meta name="referrer" content="no-referrer-when-downgrade" />
-
-          <link rel="icon" href="/favicon.ico" />
-          {/* <link rel="manifest" href="/manifest.json" /> */}
-
-          {/* Apple Touch Icons */}
-
-          {/* <link rel="apple-touch-icon" sizes="48x48" href="/assets/icons/icon-48x48.png" />
-          <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/icon-72x72.png" />
-          <link rel="apple-touch-icon" sizes="96x96" href="/assets/icons/icon-96x96.png" />
-          <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/icon-144x144.png" />
-          <link rel="apple-touch-icon" sizes="192x192" href="/assets/icons/icon-192x192.png" />
-          <link rel="apple-touch-icon" sizes="512x512" href="/assets/icons/icon-512x512.png" /> */}
         </Head>
 
         <body>

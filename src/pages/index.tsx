@@ -1,11 +1,14 @@
-import Head from 'next/head'
 import Image from 'next/image'
 
 import { Wrapper, Container, Content, Introduction, Intro, Subtitle, ImageBox, Buttons, Button } from '../styles/home'
 
 import SEO from '../components/forward/SEO'
 
-export default function Home() {
+export default function Home(): JSX.Element {
+  function redirectToResume () {
+    window.location.href = '/resume.pdf'
+  }
+
   return (
     <>
       <SEO />
@@ -14,7 +17,7 @@ export default function Home() {
         <Container className="main-container">
           <Content>
             <ImageBox>
-              <Image src="http://github.com/xyluis.png" alt="xyLuis avatar" width="200" height="200"/>
+              <Image src="http://github.com/xyluis.png" alt="xyLuis avatar" width="250" height="250"/>
             </ImageBox>
 
             <Introduction>
@@ -27,6 +30,8 @@ export default function Home() {
             <Button onClick={() => window.open('https://github.com/xyluis', '_blank')}>Github</Button>
             <Button onClick={() => window.open('https://twitter.com/xyluiis', '_blank')}>Twitter</Button>
             <Button onClick={() => window.open('https://instagram.com/xyluiis', '_blank')}>Instagram</Button>
+            <Button onClick={() => window.open('https://linkedin.com/in/xyluis', '_blank')}>Linkedin</Button>
+            <Button onClick={() => redirectToResume()}>Resume</Button>
           </Buttons>
         </Container>
       </Wrapper>

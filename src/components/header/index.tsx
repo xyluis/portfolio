@@ -10,7 +10,7 @@ export default function Header (): JSX.Element {
       <Container className="main-container">
         <NextLink href="/" passHref><a><Logo /></a></NextLink>
         <Links>
-          <Link>Sobre</Link>
+          <Link href="/resume.pdf">Resume</Link>
         </Links>
       </Container>
     </Wrapper>
