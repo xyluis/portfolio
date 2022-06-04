@@ -2,9 +2,14 @@ import { styled } from './theme'
 
 export const Wrapper = styled('div', {
   width: '100%',
+  height: 'calc(100vh - $20)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  '@mobile': {
+    height: 'auto'
+  }
 })
 
 export const Container = styled('div', {

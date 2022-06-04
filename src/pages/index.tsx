@@ -1,12 +1,15 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import { Wrapper, Container, Content, Introduction, Intro, Subtitle, ImageBox, Buttons, Button } from '../styles/home'
 
 import SEO from '../components/forward/SEO'
 
 export default function Home(): JSX.Element {
+  const router = useRouter()
+
   function redirectToResume () {
-    window.location.href = '/resume.pdf'
+    router.push('/resume.pdf')
   }
 
   return (
