@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  webpack5: true,
+const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['github.com'],
-  }
+  swcMinify: true,
 }
+
+module.exports = nextConfig

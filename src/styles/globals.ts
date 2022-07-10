@@ -1,4 +1,4 @@
-import { globalCss } from './theme'
+import { globalCss, css } from './index'
 
 export const GlobalStyle = globalCss({
   '*': {
@@ -8,16 +8,18 @@ export const GlobalStyle = globalCss({
     textDecoration: 'none'
   },
 
-  'body': {
+  body: {
     display: 'block',
     fontSize: '100%',
     fontFamily: '$default',
-    textRendering: 'optimizeLegibility',
-    backgroundColor: '$black'
+    textRendering: 'geometricPrecision',
+    backgroundColor: '$background',
+    scrollBehavior: 'smooth',
   },
 
-  'body, input, textarea, select, button': {
-    color: '$text-white'
+  'body, input, textarea, select, button, a': {
+    color: '$text-base',
+    textDecoration: 'none'
   },
 
   'h1, h1, h3, h4, h5, h6, strong': {
@@ -25,22 +27,34 @@ export const GlobalStyle = globalCss({
     fontWeight: '$bold',
   },
 
-  'h1': {
+  h1: {
     fontSize: '$4xl'
   },
 
-  'h2': {
+  h2: {
     fontSize: '$2xl'
   },
 
-  '.main-container': {
-    width: '100%',
-    maxWidth: '1280px',
-    px: '$20',
-    margin: '0 auto',
+  button: {
+    cursor: 'pointer',
+    outline: 'none',
 
-    '@mobile': {
-      px: '$10'
+    '&:focus': {
+      outline: 'none'
+    },
+    '&:hover': {
+      outline: 'none'
     }
   },
+})
+
+export const MainContainer = css({
+  width: '100%',
+  maxWidth: '1140px',
+  px: '$20',
+  margin: '0 auto',
+
+  '@mobile': {
+    px: '$10'
+  }
 })

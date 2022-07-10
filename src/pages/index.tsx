@@ -1,43 +1,32 @@
-import Image from 'next/image'
-import { useRouter } from 'next/router'
+import Head from 'next/head'
+import { User } from '../components/User'
+import { Button } from '../components/Button'
+import { MainContainer } from '../styles/globals'
 
-import { Wrapper, Container, Content, Introduction, Intro, Subtitle, ImageBox, Buttons, Button } from '../styles/home'
+import { Box, Buttons, Footer } from '../styles/Home.page'
 
-import SEO from '../components/forward/SEO'
-
-export default function Home(): JSX.Element {
-  const router = useRouter()
-
-  function redirectToResume () {
-    router.push('/resume.pdf')
-  }
-
+export default function Home() {
   return (
-    <>
-      <SEO />
+    <div >
+      <Head>
+        <title>Luís - Links</title>
+        <meta name="description" content="All my links" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <Wrapper>
-        <Container className="main-container">
-          <Content>
-            <ImageBox>
-              <Image src="http://github.com/xyluis.png" alt="xyLuis avatar" width="250" height="250"/>
-            </ImageBox>
+      <Box className={MainContainer()}>
+        <User />
 
-            <Introduction>
-              <Intro>{'Hey! I\'m Luís'}</Intro>
-              <Subtitle>I love pizza, games, movies and travel!</Subtitle>
-            </Introduction>
-          </Content>
+        <Buttons>
+          <Button icon='github' href="https://github.com/xyluis" target="_blank">Github</Button>
+          <Button icon='instagram' href="https://instagram.com/xyluiis" target="_blank">Instagram</Button>
+          <Button icon='twitter' href="https://twitter.com/xyluiis" target="_blank">Twitter</Button>
+          <Button icon='linkedin' href="https://linkedin.com/in/xyluis" target="_blank">Linkedin</Button>
+          <Button icon='behance' href="#">Behance</Button>
+        </Buttons>
 
-          <Buttons>
-            <Button onClick={() => window.open('https://github.com/xyluis', '_blank')}>Github</Button>
-            <Button onClick={() => window.open('https://twitter.com/xyluiis', '_blank')}>Twitter</Button>
-            <Button onClick={() => window.open('https://instagram.com/xyluiis', '_blank')}>Instagram</Button>
-            <Button onClick={() => window.open('https://linkedin.com/in/xyluis', '_blank')}>Linkedin</Button>
-            <Button onClick={() => redirectToResume()}>Resume</Button>
-          </Buttons>
-        </Container>
-      </Wrapper>
-    </>
+        <Footer>Made with ❤️ by @xyluis</Footer>
+      </Box>
+    </div>
   )
 }
