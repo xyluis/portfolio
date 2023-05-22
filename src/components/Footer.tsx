@@ -7,7 +7,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="container fixed bottom-0 hidden w-full items-end justify-between md:flex">
+    <footer className="fixed bottom-0 hidden w-full items-end justify-between px-10 md:flex">
       <div className="flex flex-col items-center justify-center gap-4 after:h-24 after:w-px after:bg-white">
         <Link target="__blank" href="https://twitter.com/xyluiis">
           <TwitterLogoIcon className="h-5 w-5 transition-all hover:-translate-y-1 hover:text-white/80" />
