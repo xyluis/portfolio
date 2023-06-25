@@ -11,7 +11,7 @@ export function Header() {
         > */}
         <Signature width={74} height={24} />
         {/* </Link> */}
-        <nav className="hidden md:flex">
+        <nav className="hidden font-mono md:flex">
           <ul className="flex items-center justify-center gap-4">
             <li>
               <Link

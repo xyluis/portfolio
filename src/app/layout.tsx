@@ -5,6 +5,7 @@ import './globals.css'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
+import { getBaseUrl } from '@/lib/get-base-url'
 
 export const metadata: Metadata = {
   title: 'Luís',
@@ -13,16 +14,17 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Luís',
     images: {
-      url: 'https://i.imgur.com/JrAR7s2.png',
+      url: '/og.image.png',
     },
   },
   twitter: {
     title: 'Luís',
     description: "Luís's personal website built with Next.js and Tailwind CSS.",
     images: {
-      url: 'https://i.imgur.com/JrAR7s2.png',
+      url: '/og.image.png',
     },
   },
+  metadataBase: new URL(getBaseUrl()),
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
