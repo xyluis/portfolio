@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'Luís',
+    description: "Luís's personal website built with Next.js and Tailwind CSS.",
+    url: getBaseUrl(),
     images: {
       url: '/og.image.png',
     },
