@@ -17,7 +17,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
   return NextResponse.json({
     album: song.item.album_name,
     albumImageUrl: song.item.album.images[0].url,
-    artist: song.item.artists[0].name,
+    artist: song.item.artists.map((artist: any) => artist.name).join(', '),
     songUrl: song.item.external_urls.spotify,
     isPlaying: song.is_playing,
     title: song.item.name.replace(/\([^()]*\)/g, ''),
