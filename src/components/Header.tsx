@@ -5,12 +5,7 @@ export function Header() {
   return (
     <div className="fixed left-0 top-0 z-10 flex h-[88px] w-full items-center justify-center backdrop-blur-md">
       <div className="container flex items-center justify-between">
-        {/* <Link
-          href="/"
-          className="text-2xl font-bold transition-colors hover:text-white/80"
-        > */}
         <Signature width={74} height={24} />
-        {/* </Link> */}
         <nav className="hidden font-mono md:flex">
           <ul className="flex items-center justify-center gap-4">
             <li>
