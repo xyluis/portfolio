@@ -17,7 +17,7 @@ export function Header() {
               <Link
                 href="http://github.com/xyluis"
                 target="_blank"
-                className="flex items-center justify-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center justify-center gap-2 transition-colors hover:text-indigo-500"
               >
                 <span>Github</span>
               </Link>
@@ -26,7 +26,7 @@ export function Header() {
               <Link
                 href="http://twitter.com/xyluiis"
                 target="_blank"
-                className="flex items-center justify-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center justify-center gap-2 transition-colors hover:text-indigo-500"
               >
                 <span>Twitter</span>
               </Link>
@@ -35,7 +35,7 @@ export function Header() {
               <Link
                 href="https://discord.com/users/471333722810089492"
                 target="_blank"
-                className="flex items-center justify-center gap-2 transition-colors hover:text-white/80"
+                className="flex items-center justify-center gap-2 transition-colors hover:text-indigo-500"
               >
                 <span>Discord</span>
               </Link>
@@ -43,7 +43,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <span className="font-mono text-xs text-white/70">
+        <span className="font-mono text-xs text-zinc-500">
           {new Date().getFullYear()}
         </span>
       </div>

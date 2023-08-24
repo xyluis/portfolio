@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen w-full flex-col items-center justify-center bg-black font-sans text-white antialiased lg:gap-32">
+      <body className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-950 font-sans text-zinc-100 antialiased lg:gap-32">
         <Header />
         {children}
         <Footer />
