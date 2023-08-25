@@ -1,5 +1,6 @@
 import { ChevronsRight } from 'lucide-react'
 import { Status } from '@/components/Status'
+import { getBaseUrl } from '@/lib/get-base-url'
 
 export default function Home() {
   return (
@@ -27,7 +28,8 @@ export default function Home() {
             >
               GitHub
             </a>
-            {process.env.VERCEL_URL}.
+            {process.env.VERCEL_URL}
+            {getBaseUrl()}.
           </p>
           <Status />
           <a
