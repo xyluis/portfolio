@@ -27,7 +27,7 @@ export default function Home() {
             >
               GitHub
             </a>
-            .
+            {process.env.VERCEL_URL}.
           </p>
           <Status />
           <a
