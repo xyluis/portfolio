@@ -2,11 +2,10 @@
 
 import { Music } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
-import { getBaseUrl } from '@/lib/get-base-url'
 import { songSchema } from '@/schemas/Song'
 
 export const getSpotifyStatus = async () => {
-  const response = await fetch(`${getBaseUrl()}/api/spotify`, {
+  const response = await fetch(`/api/spotify`, {
     cache: 'no-store',
   })
   const data = await response.json()
