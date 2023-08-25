@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 import { getBaseUrl } from '@/lib/get-base-url'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Luís',
@@ -33,10 +34,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-950 font-sans text-zinc-100 antialiased lg:gap-32">
-        <Header />
-        {children}
-        <Footer />
-        <TailwindIndicator />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+          <TailwindIndicator />
+        </Providers>
       </body>
     </html>
   )

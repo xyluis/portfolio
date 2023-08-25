@@ -1,3 +1,6 @@
+import { songSchema } from '@/schemas/Song'
+import { getBaseUrl } from './get-base-url'
+
 const basic = Buffer.from(
   `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`,
 ).toString('base64')
@@ -29,4 +32,15 @@ export const getNowPlaying = async () => {
       Authorization: `Bearer ${accessToken}`,
     },
   })
+}
+
+export const getSpotifyStatus = async () => {
+  const response = await fetch(`${getBaseUrl()}/api/spotify`, {
+    cache: 'no-store',
+  })
+  const data = await response.json()
+
+  const song = songSchema.parse(data)
+
+  return song
 }
